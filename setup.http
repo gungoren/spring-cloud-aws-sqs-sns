@@ -1,0 +1,49 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/keys/create?customerId=customer-2
+
+# 2 keys created
+# 57457548-3bfa-4ff8-91ab-85d4e4146ffb
+# 281b4acf-c7cc-4af5-b0d9-0a2b33feb6b1
+
+###
+# 3da460ef-3fde-4adf-a34f-291151209c90
+POST http://localhost:8080/rules/create
+Content-Type: application/json
+
+{
+"customerId": "customer-1",
+"expression": "payload.service === 'billing-service'",
+"destination": "team-1"
+}
+
+
+
+###
+POST localhost:8080/rules/create
+Content-Type: application/json
+
+{
+"customerId": "customer-1",
+"expression": "payload.priority > 8",
+"destination": "team-2"
+}
+
+
+###
+POST localhost:8080/rules/create
+Content-Type: application/json
+
+{
+"customerId": "customer-1",
+"expression": "true",
+"destination": "team-3"
+}
+
+###

@@ -1,0 +1,22 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST localhost:8080/ingest/v5
+Content-Type: application/json
+X-API-Key: 57457548-3bfa-4ff8-91ab-85d4e4146ffb
+
+{
+  "message": "MySql cannot be reached at 10.30.5.1.:3306",
+  "service": "auth-db",
+  "priority": 9,
+  "details": {
+    "host": "10.3.5.1"
+  }
+}
+
+###
