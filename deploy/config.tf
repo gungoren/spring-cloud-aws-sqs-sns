@@ -1,3 +1,8 @@
+variable "region" {
+  description = "Location for services will be hosted"
+  default     = "eu-central1"
+}
+
 provider "aws" {
-  region = "eu-central-1"
+  region = var.region
 }
